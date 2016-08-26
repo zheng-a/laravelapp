@@ -11,14 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/test', function () {
-    //return view('welcome');
-    return 'Hello World';
-});
+Route::get('/', 'IndexController@index');
+
 Route::get('/admin/product/new', 'ProductController@newProduct');
-Route::get('/admin/products', 'ProductController@index');
+Route::get('/admin/manage', 'ProductController@index');
 Route::get('/admin/product/destroy/{id}', 'ProductController@destroy');
 Route::post('/admin/product/save', 'ProductController@add');
+
+// 认证路由...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@logout');
+
+// 注册路由...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');

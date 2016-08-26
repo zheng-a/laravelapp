@@ -6,17 +6,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<title>正啊 - 内容编辑</title>
-	<link rel="stylesheet" type="http://rikkiyun.daoapp.io/text/css" href="http://rikkiyun.daoapp.io/css/normalize.css">
-	<link rel="stylesheet" type="http://rikkiyun.daoapp.io/text/css" href="http://rikkiyun.daoapp.io/fonts/iconfont.css">
-	<link rel="stylesheet" type="http://rikkiyun.daoapp.io/text/css" href="http://rikkiyun.daoapp.io/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 	<div id="particles"></div>
 	<div class="wrapper">
 		<div class="navbox">
 			<a href="index.html" class="logo">
-				<img src="http://rikkiyun.daoapp.io/images/logo.png" id="logo01">
-				<img src="http://rikkiyun.daoapp.io/images/logo_a.png" id="logo02">
+				<img src="/images/logo.png" id="logo01">
+				<img src="/images/logo_a.png" id="logo02">
 			</a>
 			<ul class="nav">
 				<li><a href="index.html" id="all">最新优惠</a></li>
@@ -47,14 +47,14 @@
 			</div>
 			<div class="ewm">
 				<b>爆料+被采纳=2元</b>
-				<img src="http://rikkiyun.daoapp.io/images/ewm.jpg">
+				<img src="/images/ewm.jpg">
 				<p>关注微信公众号rikkiyun</p>
 			</div>
 		</div>
 		@yield('popbox')
 	</div>
-	<script src='http://rikkiyun.daoapp.io/js/jquery-1.7.2.min.js'></script>
-	<script src='http://rikkiyun.daoapp.io/js/jquery.particleground.min.js'></script>
+	<script src='/js/jquery-1.7.2.min.js'></script>
+	<script src='/js/jquery.particleground.min.js'></script>
 	<script>
 	//线条
 	$(document).ready(function() {
