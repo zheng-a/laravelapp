@@ -1,6 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.manage')
 
 @section('content')
+<div class="ma_right">
 <div class="mainbox">
 	<div class="centerbox">
 		<form method="POST" action="/admin/product/save" class="form-horizontal" enctype="multipart/form-data" role="form">
@@ -42,7 +43,7 @@
 				<div><textarea name = "description" style="width:100%; height:300px;"></textarea></div>
 			</div>
 			<hr class="hr">
-			<h2>分享者信息</h2>
+			<!--h2>分享者信息</h2>
 			<div class="editbox">
 				<h2>昵称</h2>
 				<div><input name = "member_id" type="text" class="inputtext"></div>
@@ -55,18 +56,10 @@
 			<div class="editbox">
 				<h2>自定义发布状态</h2>
 				<div><input type="text" placeholder="如：丧心病狂地" class="inputtext inputtext01">&nbsp;&nbsp;发布于2016年8月1日</div>
-			</div>
+			</div-->
 			<input type="submit" value="发 布" class="editbtn01">
 		</form>
 	</div>
 </div>
-@endsection
-
-@section('popbox')
-<div class="popbox" style="display:none">
-	<div class="pop">
-		<p>成功发布</p>
-		<button class="popbtn">确定</button>
-	</div>
 </div>
 @endsection
