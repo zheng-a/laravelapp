@@ -48,12 +48,13 @@
 			<div class="ewm">
 				<b>爆料+被采纳=2元</b>
 				<img src="/images/ewm.jpg">
-				<p>关注微信公众号rikkiyun</p>
+				<p>关注微信公众号<br>zhenga2016</p>
 			</div>
 		</div>
 		@yield('popbox')
 	</div>
 	<script src='/js/jquery-1.7.2.min.js'></script>
+	<script src='/js/jquery.lazyload.min.js'></script>
 	<script src='/js/jquery.particleground.min.js'></script>
 	<script>
 	//线条

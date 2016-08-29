@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<title>正啊 - 内容编辑</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="particles"></div>
+	<div class="wrapper">
+		<div class="navbox">
+			<a href="index.html" class="logo">
+				<img src="images/logo.png" id="logo01">
+				<img src="images/logo_a.png" id="logo02">
+			</a>
+			<ul class="nav">
+				<li><a href="index.html" id="all">最新优惠</a></li>
+				<li><a href="index.html" id="entertainment">吃喝玩乐</a></li>
+				<li><a href="index.html" id="market">超市特价</a></li>
+				<li><a href="index.html" id="brand">抵买品牌</a></li>
+			</ul>
+		</div>
+		<div class="hidenav">
+			<div class="hidenav_menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<ul class="hidenav_link">
+				<li><a href="index.html" id="all01">最新优惠</a></li>
+				<li><a href="index.html" id="entertainment01">吃喝玩乐</a></li>
+				<li><a href="index.html" id="market01">超市特价</a></li>
+				<li><a href="index.html" id="brand01">抵买品牌</a></li>
+			</ul>
+			<div class="mask" style="display:none"></div>
+		</div>
+		<div class="contentbox">
+			<div class="mainbox">
+				<div class="centerbox">
+					<h2>文章内容</h2>
+					<div class="editbox">
+						<h2>标题</h2>
+						<div><input type="text" placeholder="如：扬名广场大风车3折超划算啊" class="inputtext"></div>
+					</div>
+					<div class="editbox">
+						<h2>封面图</h2>
+						<p>建议按照16:9的比例，即手机横屏状态下拍摄的照片，大小不超过2M</p>
+						<div><input type="file"></div>
+					</div>
+					<div class="editbox">
+						<h2>位置</h2>
+						<p>建议填写具体地址+商铺名称</p>
+						<div><input type="text" placeholder="如：前山诚丰广场5楼comebuy" class="inputtext"></div>
+					</div>
+					<div class="editbox">
+						<h2>优惠方式</h2>
+						<p>输入标签内容</p>
+						<div><input type="text" placeholder="如：买一送一、全场七折" class="inputtext"></div>
+					</div>
+					<div class="editbox">
+						<h2>优惠时段</h2>
+						<div><input type="date" placeholder="开始时间" class="inputtext inputtext01"><span>&nbsp;-&nbsp;</span><input type="date" placeholder="结束时间" class="inputtext inputtext01"></div>
+					</div>
+					<div class="editbox">
+						<h2>商家联系方式</h2>
+						<div><input type="text" placeholder="如：手机：13000000000" class="inputtext"></div>
+					</div>
+					<div class="editbox">
+						<h2>频道</h2>
+						<div>
+							<label><input type="radio" name="nav">&nbsp;吃喝玩乐</label>&nbsp;&nbsp;
+							<label><input type="radio" name="nav">&nbsp;超市特价</label>&nbsp;&nbsp;
+							<label><input type="radio" name="nav">&nbsp;抵买品牌</label>
+						</div>
+					</div>
+					<div class="editbox">
+						<h2>正文</h2>
+						<div><textarea style="width:100%; height:300px;"></textarea></div>
+					</div>
+					<hr class="hr">
+					<h2>分享者信息</h2>
+					<div class="editbox">
+						<h2>昵称</h2>
+						<div><input type="text" class="inputtext"></div>
+					</div>
+					<div class="editbox">
+						<h2>头像</h2>
+						<p>建议按照1:1的比例，大小不超过100k</p>
+						<div><input type="file"></div>
+					</div>
+					<div class="editbox">
+						<h2>自定义发布状态</h2>
+						<div><input type="text" placeholder="如：丧心病狂地" class="inputtext inputtext01">&nbsp;&nbsp;发布于2016年8月1日</div>
+					</div>
+					<input type="submit" value="发 布" class="editbtn01">
+				</div>
+			</div>
+			<div class="footer">
+				<div>©2016-2017 正啊版权所有<br>网站备案/许可证号:粤ICP备xxxxx号-1</div>
+			</div>
+			<div class="ewm">
+				<b>爆料+被采纳=2元</b>
+				<img src="images/ewm.jpg">
+				<p>扫码去爆料<br>zhenga2016</p>
+			</div>
+		</div>y
+		<div class="popbox" style="display:none">
+			<div class="pop">
+				<p>成功发布</p>
+				<button class="popbtn">确定</button>
+			</div>
+		</div>
+	</div>
+	<script src='js/jquery-1.7.2.min.js'></script>
+	<script src='js/jquery.particleground.min.js'></script>
+	<script>
+	//线条
+	$(document).ready(function() {
+		$('#particles').particleground({
+			dotColor: '#e6e6e6',
+			lineColor: '#e6e6e6'
+		});
+	});
+
+	$(function(){
+		//移动端菜单
+		$(".hidenav_menu").click(function(){
+			if ($(".hidenav_menu").hasClass("active")){
+				$(".hidenav_link").slideUp(100);
+				$(".mask").fadeOut(100);
+				$(".hidenav_menu").removeClass("active");
+			}else{
+				$(".mask").fadeIn(100);
+				$(".hidenav_link").slideDown(100);
+				$(".hidenav_menu").addClass("active");
+			}
+		})
+		$(".mask").click(function(){
+			$(".hidenav_link").slideUp(100);
+			$(".mask").fadeOut(100);
+			$(".hidenav_menu").removeClass("active");
+		})
+
+		//爆料按钮
+		$(".bl").toggle(function(){
+			$(".ewm").show();
+		},function(){
+			$(".ewm").hide();
+		})
+
+		//导航
+		$(".nav li").click(function(){
+			$(".nav li").children("a").removeClass("selected");
+			$(this).children("a").addClass("selected");
+			$(document).scrollTop(1).scrollTop(-1);
+		})
+		$(".hidenav_link li").click(function(){
+			$(".hidenav_link li").children("a").removeClass("selected");
+			$(this).children("a").addClass("selected");
+			$(document).scrollTop(1).scrollTop(-1);
+			$(".hidenav_link").slideUp(100);
+			$(".mask").fadeOut(100);
+			$(".hidenav_menu").removeClass("active");
+		})
+
+		//弹框
+		$(".editbtn01").click(function(){
+			$(".popbox").fadeIn(200);
+		})
+		$(".popbtn").click(function(){
+			$(".popbox").hide();
+		})
+	})
+	</script>
+</body>
+</html>
