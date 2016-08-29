@@ -9,6 +9,11 @@
 	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src='js/jquery-1.7.2.min.js'></script>
+	<script src="js/jquery.lazyload.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src='js/jquery.particleground.min.js'></script>
+	<script src='js/common.js'></script>
 </head>
 <body>
 	<div id="particles"></div>
@@ -158,86 +163,6 @@
 			</div>
 		</div>
 	</div>
-	<script src='js/jquery-1.7.2.min.js'></script>
-	<script src="js/jquery.lazyload.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src='js/jquery.particleground.min.js'></script>
-	<script>
-	//线条
-	$(document).ready(function() {
-		$('#particles').particleground({
-			dotColor: '#e6e6e6',
-			lineColor: '#e6e6e6'
-		});
-	});
 
-	//动画效果
-	new WOW().init();
-
-	$(function(){
-		//lazyload
-		$("img.lazy").lazyload({
-			placeholder : "images/logo_gray.png",
-			effect: "fadeIn"
-		});
-
-		//移动端菜单
-		$(".hidenav_menu").click(function(){
-			if ($(".hidenav_menu").hasClass("active")){
-				$(".hidenav_link").slideUp(100);
-				$(".mask").fadeOut(100);
-				$(".hidenav_menu").removeClass("active");
-			}else{
-				$(".mask").fadeIn(100);
-				$(".hidenav_link").slideDown(100);
-				$(".hidenav_menu").addClass("active");
-			}
-		})
-		$(".mask").click(function(){
-			$(".hidenav_link").slideUp(100);
-			$(".mask").fadeOut(100);
-			$(".hidenav_menu").removeClass("active");
-		})
-
-		//爆料按钮
-		$(".bl").toggle(function(){
-			$(".ewm").show();
-		},function(){
-			$(".ewm").hide();
-		})
-
-		//导航
-		$(".nav li").click(function(){
-			$(".nav li").children("a").removeClass("selected");
-			$(this).children("a").addClass("selected");
-			$(document).scrollTop(1).scrollTop(-1);
-		})
-		$(".hidenav_link li").click(function(){
-			$(".hidenav_link li").children("a").removeClass("selected");
-			$(this).children("a").addClass("selected");
-			$(document).scrollTop(1).scrollTop(-1);
-			$(".hidenav_link").slideUp(100);
-			$(".mask").fadeOut(100);
-			$(".hidenav_menu").removeClass("active");
-		})
-
-		//筛选
-		$("#all,#all01").click(function(){
-			$(".list li").fadeIn();
-		})
-		$("#entertainment,#entertainment01").click(function(){
-			$(".list li").hide();
-			$(".entertainment").fadeIn();
-		})
-		$("#market,#market01").click(function(){
-			$(".list li").hide();
-			$(".market").fadeIn();
-		})
-		$("#brand,#brand01").click(function(){
-			$(".list li").hide();
-			$(".brand").fadeIn();
-		})
-	})
-	</script>
 </body>
 </html>

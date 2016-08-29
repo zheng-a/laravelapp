@@ -7,7 +7,13 @@
 	<title>正啊 - 珠海本地优惠</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src='js/jquery-1.7.2.min.js'></script>
+	<script src="js/jquery.lazyload.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src='js/jquery.particleground.min.js'></script>
+	<script src='js/common.js'></script>
 </head>
 <body>
 	<div id="particles"></div>
@@ -145,80 +151,10 @@
 			</div>
 		</div>
 	</div>
-	<script src='js/jquery-1.7.2.min.js'></script>
-	<script src='js/jquery.particleground.min.js'></script>
-	<script>
-	//线条
-	$(document).ready(function() {
-		$('#particles').particleground({
-			dotColor: '#e6e6e6',
-			lineColor: '#e6e6e6'
-		});
-	});
-
-	$(function(){
-		//移动端菜单
-		$(".hidenav_menu").click(function(){
-			if ($(".hidenav_menu").hasClass("active")){
-				$(".hidenav_link").slideUp(100);
-				$(".mask").fadeOut(100);
-				$(".hidenav_menu").removeClass("active");
-			}else{
-				$(".mask").fadeIn(100);
-				$(".hidenav_link").slideDown(100);
-				$(".hidenav_menu").addClass("active");
-			}
-		})
-		$(".mask").click(function(){
-			$(".hidenav_link").slideUp(100);
-			$(".mask").fadeOut(100);
-			$(".hidenav_menu").removeClass("active");
-		})
-
-		//爆料按钮
-		$(".bl").toggle(function(){
-			$(".ewm").show();
-		},function(){
-			$(".ewm").hide();
-		})
-
-		//导航
-		$(".nav li").click(function(){
-			$(".nav li").children("a").removeClass("selected");
-			$(this).children("a").addClass("selected");
-			$(document).scrollTop(1).scrollTop(-1);
-		})
-		$(".hidenav_link li").click(function(){
-			$(".hidenav_link li").children("a").removeClass("selected");
-			$(this).children("a").addClass("selected");
-			$(document).scrollTop(1).scrollTop(-1);
-			$(".hidenav_link").slideUp(100);
-			$(".mask").fadeOut(100);
-			$(".hidenav_menu").removeClass("active");
-		})
-
+	<script type="text/javascript">
 		//title内容
 		var titletext = $(".yhtitle").text();
 		$("title").text('正啊 - ' + titletext);
-
-		//留言板
-		$(".board > div > textarea").click(function(){
-			$(".boardbtn").fadeOut(200);
-			$(this).siblings(".boardbtn").fadeIn(200);
-		});
-		$(".board > div > textarea").blur(function(){
-			$(".boardbtn").fadeOut(200);
-		})
-
-		$(".boardbtn").click(function(){
-			$(this).siblings("p").fadeIn(200);
-			$(this).siblings("p").children("span").text($(this).siblings("textarea").attr("value"));
-			$(this).siblings("textarea").hide(0,function(){
-				$(this).siblings(".boardbtn").fadeOut(200);
-			});
-		})
-
-	})
 	</script>
 </body>
 </html>

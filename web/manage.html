@@ -7,7 +7,13 @@
 	<title>正啊 - 后台管理</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src='js/jquery-1.7.2.min.js'></script>
+	<script src="js/jquery.lazyload.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src='js/jquery.particleground.min.js'></script>
+	<script src='js/common.js'></script>
 </head>
 <body style="background: #f0f0f0;">
 	<div class="ma_top">
@@ -170,30 +176,5 @@
 			</div>
 		</div>
 	</div>
-	<script src='js/jquery-1.7.2.min.js'></script>
-	<script type="text/javascript">
-		$(function(){
-			//模拟删除对话框
-			$(".ma_del").click(function(){
-				alert("确认删除吗")
-			})
-
-			//左侧导航切换效果
-			$(".ma_nav a").click(function(){
-				$(this).siblings().removeClass("selected");
-				$(this).addClass("selected");
-			})
-
-			//过期信息背景色改变
-			$(".ma_checkbox:checked").parent("td").parent("tr").addClass("guoqi");
-			$(".ma_checkbox").click(function(){
-				if($(this).is(":checked")){
-					$(this).parent("td").parent("tr").addClass("guoqi");
-				}else{
-					$(this).parent("td").parent("tr").removeClass("guoqi");
-				}
-			})
-		})
-	</script>
 </body>
 </html>
