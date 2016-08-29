@@ -11,7 +11,7 @@
 					<span>{{$product->discount}}</span>
 					<div class="sale_tips">
 						<b><i class="iconfont">&#xe60b;</i>{{$product->discount}}</b>
-						<b><i class="iconfont">&#xe60f;</i>{{$product->startat}}~{{$product->endat}}</b>
+						<b><i class="iconfont">&#xe60f;</i>{{$product->startat}}&nbsp;至&nbsp;{{$product->endat}}</b>
 					</div>
 				</div>
 				<h1 class="sale_title">
