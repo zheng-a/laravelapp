@@ -225,9 +225,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     z-index: -1;
     left: 0;
     top: 0;
-    background: -webkit-linear-gradient(top,#f0f0f0,#fff);
-    background: -moz-linear-gradient(top,#f0f0f0,#fff);
-    background: -o-linear-gradient(top,#f0f0f0,#fff);
+    background: -webkit-linear-gradient(top,#f6f6f6,#fff);
+    background: -moz-linear-gradient(top,#f6f6f6,#fff);
+    background: -o-linear-gradient(top,#f6f6f6,#fff);
 }
 .indexbg{
     width: 100%;
