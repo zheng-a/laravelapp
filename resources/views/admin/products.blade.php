@@ -10,8 +10,13 @@
 					<i class="arrowmask"></i>
 					<span>{{$product->discount}}</span>
 					<div class="sale_tips">
+<<<<<<< HEAD
 						<b><i class="iconfont">&#xe60b;</i>{{$product->address}}</b>
 						<b><i class="iconfont">&#xe60f;</i>{{$product->startat}} 至 {{$product->endat}}</b>
+=======
+						<b><i class="iconfont">&#xe60b;</i>{{$product->discount}}</b>
+						<b><i class="iconfont">&#xe60f;</i>{{$product->startat}}&nbsp;至&nbsp;{{$product->endat}}</b>
+>>>>>>> origin/master
 					</div>
 				</div>
 				<h1 class="sale_title">
