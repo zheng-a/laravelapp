@@ -19,7 +19,7 @@ class CreateTableProducts extends Migration
             $table->string('discount');
             $table->date('startat');
             $table->date('endat');
-            $table->integer('channel');
+            $table->string('channel');
             $table->string('description');
             $table->string('imageurl');
             $table->string('file_id');

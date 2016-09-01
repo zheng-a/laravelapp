@@ -37,18 +37,17 @@ class ProductController extends Controller
 
     public function add(){
     	$file = Request::file('file');
-        $destinationPath = 'uploads/';
-
     	$extension = $file->getClientOriginalExtension();
-    	Storage::disk('local')->put($file->getFilename().'.'.$extension, File::get($file));
+        $newFileName = $file->getFilename().'.'.$extension;
+        $savePath = '/img/products/'.$newFileName;
+        Storage::put($savePath,File::get($file));
 
     	$entry = new \App\File();
-        $entry->filename = $file->getFilename().'.'.$extension;
+        $entry->filename = $newFileName;
     	$entry->mime = $file->getClientMimeType();
     	$entry->original_filename = $file->getClientOriginalName();
 
     	$entry->save();
-        $file->move($destinationPath, $entry->filename);
 
     	$product = new Product();           
         $product->title =Request::input('title');
@@ -56,10 +55,10 @@ class ProductController extends Controller
         $product->discount=Request::input('discount');
         $product->startat=Request::input('startat');
         $product->endat=Request::input('endat');
-        $product->channel='1';//Request::input('channel');
+        $product->channel=Request::input('channel');
         $product->description =Request::input('description');
         $product->file_id=$entry->id; 
-        $product->imageurl ='/uploads/'.$entry->filename;//Request::input('imageurl');
+        $product->imageurl ="/uploads".$savePath;
         $product->member_id =Auth::user()->name;//Request::input('member_id');
 
         $product->save();
