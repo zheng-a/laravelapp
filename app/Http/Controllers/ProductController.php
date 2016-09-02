@@ -60,6 +60,7 @@ class ProductController extends Controller
         $product->file_id=$entry->id; 
         $product->imageurl ="/uploads".$savePath;
         $product->member_id =Auth::user()->name;//Request::input('member_id');
+        $product->views=0;
 
         $product->save();
 

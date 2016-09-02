@@ -11,8 +11,8 @@
 					<th>限期</th>
 					<th>是否过期</th>
 					<th>分享者</th>
-					<!--th>留言数</th>
-					<th>阅读量</th-->
+					<!--th>留言数</th-->
+					<th>阅读量</th>
 				</tr>
 				@foreach ($products as $product)
 				<tr>
@@ -23,8 +23,8 @@
 					<td>{{$product->startat}}~{{$product->endat}}</td>
 					<td><input type="checkbox" class="ma_checkbox"></td>
 					<td>{{$product->member_id}}</td>
-					<!--td>21</td>
-					<td>350</td-->
+					<!--td>21</td-->
+					<td>{{$product->views}}</td>
 				</tr>
 				@endforeach
 			</table>

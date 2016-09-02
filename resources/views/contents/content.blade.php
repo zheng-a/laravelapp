@@ -6,7 +6,7 @@
 	<div class="centerbox">
 		<div class="yhid">
 			编号No.{{$product->id}}
-			<span title="阅读量"><i class="iconfont">&#xe61a;</i>23</span>
+			<span title="阅读量"><i class="iconfont">&#xe61a;</i>{{$views}}</span>
 		</div>
 		<h1 class="yhtitle">{{$product->title}}</h1>
 		<div class="sale_type">

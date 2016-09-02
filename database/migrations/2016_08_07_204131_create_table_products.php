@@ -24,6 +24,7 @@ class CreateTableProducts extends Migration
             $table->string('imageurl');
             $table->string('file_id');
             $table->string('member_id');
+            $table->integer('views')->unsigned();
             $table->timestamps();
         });
     }

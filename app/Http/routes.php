@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-//Route::get('/test', 'TestController@index');
+Route::get('/test', 'TestController@index');
 Route::get('/', 'IndexController@index');
 Route::get('/channel1', 'IndexController@channel1');
 Route::get('/channel2', 'IndexController@channel2');
