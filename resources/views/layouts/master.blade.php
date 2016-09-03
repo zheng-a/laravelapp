@@ -25,10 +25,10 @@
 				<img src="/images/logo_a.png" id="logo02">
 			</a>
 			<ul class="nav">
-				<li><a href="index.html" id="all">最新优惠</a></li>
-				<li><a href="index.html" id="entertainment">吃喝玩乐</a></li>
-				<li><a href="index.html" id="market">超市特价</a></li>
-				<li><a href="index.html" id="brand">抵买品牌</a></li>
+				<li><a href="/" id="all">最新优惠</a></li>
+				<li><a href="/channel1" id="entertainment">吃喝玩乐</a></li>
+				<li><a href="/channel2" id="market">超市特价</a></li>
+				<li><a href="/channel3" id="brand">抵买品牌</a></li>
 			</ul>
 		</div>
 		<div class="hidenav">
@@ -38,10 +38,10 @@
 				<span></span>
 			</div>
 			<ul class="hidenav_link">
-				<li><a href="index.html" id="all01">最新优惠</a></li>
-				<li><a href="index.html" id="entertainment01">吃喝玩乐</a></li>
-				<li><a href="index.html" id="market01">超市特价</a></li>
-				<li><a href="index.html" id="brand01">抵买品牌</a></li>
+				<li><a href="/" id="all01">最新优惠</a></li>
+				<li><a href="/channel1" id="entertainment01">吃喝玩乐</a></li>
+				<li><a href="/channel2" id="market01">超市特价</a></li>
+				<li><a href="/channel3" id="brand01">抵买品牌</a></li>
 			</ul>
 			<div class="bl">爆料</div>
 			<div class="mask" style="display:none"></div>

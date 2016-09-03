@@ -11,20 +11,20 @@
 					<th>限期</th>
 					<th>是否过期</th>
 					<th>分享者</th>
-					<!--th>留言数</th>
-					<th>阅读量</th-->
+					<!--th>留言数</th-->
+					<th>阅读量</th>
 				</tr>
 				@foreach ($products as $product)
 				<tr>
 					<td>{{$product->id}}<div class="ma_control"><a href="edit.html" target="_blank" class="ma_edit">编辑</a><a href="/admin/product/destroy/{{$product->id}}" class="ma_del">删除</a></div></td>
-					<td>吃喝玩乐</td>
+					<td>{{$product->channel}}</td>
 					<td><a href="content.html" target="_blank">{{$product->title}}</a></td>
 					<td>{{$product->discount}}</td>
 					<td>{{$product->startat}}~{{$product->endat}}</td>
 					<td><input type="checkbox" class="ma_checkbox"></td>
 					<td>{{$product->member_id}}</td>
-					<!--td>21</td>
-					<td>350</td-->
+					<!--td>21</td-->
+					<td>{{$product->views}}</td>
 				</tr>
 				@endforeach
 			</table>

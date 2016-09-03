@@ -33,9 +33,9 @@
 			<div class="editbox">
 				<h2>频道</h2>
 				<div>
-					<label><input type="radio" name="nav">&nbsp;吃喝玩乐</label>&nbsp;&nbsp;
-					<label><input type="radio" name="nav">&nbsp;超市特价</label>&nbsp;&nbsp;
-					<label><input type="radio" name="nav">&nbsp;抵买品牌</label>
+					<label><input type="radio" name="channel" value="吃喝玩乐">&nbsp;吃喝玩乐</label>&nbsp;&nbsp;
+					<label><input type="radio" name="channel" value="超市特价">&nbsp;超市特价</label>&nbsp;&nbsp;
+					<label><input type="radio" name="channel" value="抵买品牌">&nbsp;抵买品牌</label>
 				</div>
 			</div>
 			<div class="editbox">
