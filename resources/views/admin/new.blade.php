@@ -22,7 +22,7 @@
 				<div><input name = "address" type="text" placeholder="如：前山诚丰广场5楼comebuy" class="inputtext"></div>
 			</div>
 			<div class="editbox">
-				<h2>优惠方式</h2>
+				<h2>亮点</h2>
 				<p>输入标签内容</p>
 				<div><input name = "discount" type="text" placeholder="如：买一送一、全场七折" class="inputtext"></div>
 			</div>

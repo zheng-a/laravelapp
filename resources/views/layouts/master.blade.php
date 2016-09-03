@@ -6,9 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<title>正啊</title>
-	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src='js/jquery-1.7.2.min.js'></script>
+	<script src="js/jquery.lazyload.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src='js/jquery.particleground.min.js'></script>
+	<script src='js/common.js'></script>
 </head>
 <body>
 	<div id="particles"></div>
@@ -43,76 +49,24 @@
 		<div class="contentbox">
 			@yield('content')
 			<div class="footer">
-				<div>©2016-2017 正啊版权所有<br>网站备案/许可证号:粤ICP备xxxxx号-1</div>
+				<div>©2016-2017 正啊版权所有<br>粤ICP备16079048号-1</div>
 			</div>
 			<div class="ewm">
 				<b>爆料+被采纳=2元</b>
 				<img src="/images/ewm.jpg">
-				<p>关注微信公众号rikkiyun</p>
+				<p>关注微信公众号<br>zhenga2016</p>
 			</div>
 		</div>
 		@yield('popbox')
 	</div>
-	<script src='/js/jquery-1.7.2.min.js'></script>
-	<script src='/js/jquery.particleground.min.js'></script>
-	<script>
-	//线条
-	$(document).ready(function() {
-		$('#particles').particleground({
-			dotColor: '#e6e6e6',
-			lineColor: '#e6e6e6'
-		});
-	});
-
-	$(function(){
-		//移动端菜单
-		$(".hidenav_menu").click(function(){
-			if ($(".hidenav_menu").hasClass("active")){
-				$(".hidenav_link").slideUp(100);
-				$(".mask").fadeOut(100);
-				$(".hidenav_menu").removeClass("active");
-			}else{
-				$(".mask").fadeIn(100);
-				$(".hidenav_link").slideDown(100);
-				$(".hidenav_menu").addClass("active");
-			}
+	<script type="text/javascript">
+		$(function(){
+			//lazyload
+			$("img.lazy").lazyload({
+				placeholder : "images/logo_gray.png",
+				effect: "fadeIn"
+			});
 		})
-		$(".mask").click(function(){
-			$(".hidenav_link").slideUp(100);
-			$(".mask").fadeOut(100);
-			$(".hidenav_menu").removeClass("active");
-		})
-
-		//爆料按钮
-		$(".bl").toggle(function(){
-			$(".ewm").show();
-		},function(){
-			$(".ewm").hide();
-		})
-
-		//导航
-		$(".nav li").click(function(){
-			$(".nav li").children("a").removeClass("selected");
-			$(this).children("a").addClass("selected");
-			$(document).scrollTop(1).scrollTop(-1);
-		})
-		$(".hidenav_link li").click(function(){
-			$(".hidenav_link li").children("a").removeClass("selected");
-			$(this).children("a").addClass("selected");
-			$(document).scrollTop(1).scrollTop(-1);
-			$(".hidenav_link").slideUp(100);
-			$(".mask").fadeOut(100);
-			$(".hidenav_menu").removeClass("active");
-		})
-
-		//弹框
-		$(".editbtn01").click(function(){
-			$(".popbox").fadeIn(200);
-		})
-		$(".popbtn").click(function(){
-			$(".popbox").hide();
-		})
-	})
 	</script>
 </body>
 </html>
