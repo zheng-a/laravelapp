@@ -10,11 +10,6 @@ $(document).ready(function() {
 new WOW().init();
 
 $(function(){
-	//lazyload
-	$("img.lazy").lazyload({
-		placeholder : "images/logo_gray.png",
-		effect: "fadeIn"
-	});
 
 	//移动端菜单
 	$(".hidenav_menu").click(function(){

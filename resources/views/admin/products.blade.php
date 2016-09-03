@@ -4,7 +4,7 @@
 	<ul class="list">
 		@foreach ($products as $product)
 		<li class="wow fadeIn market">
-			<a href="content.html" class="list_img"><img class="lazy" data-original={{$product->imageurl}} src={{$product->imageurl}} style="display: inline;"></a>
+			<a href="content.html" class="list_img"><img class="lazy" data-original={{$product->imageurl}} src={{$product->imageurl}}></a>
 			<div class="list_content">
 				<div class="sale_type">
 					<i class="arrowmask"></i>

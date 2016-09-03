@@ -59,5 +59,14 @@
 		</div>
 		@yield('popbox')
 	</div>
+	<script type="text/javascript">
+		$(function(){
+			//lazyload
+			$("img.lazy").lazyload({
+				placeholder : "images/logo_gray.png",
+				effect: "fadeIn"
+			});
+		})
+	</script>
 </body>
 </html>
