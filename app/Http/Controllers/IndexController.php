@@ -37,7 +37,7 @@ class IndexController extends Controller
         if(!$product){
             $product = Product::find($id);
             if(!$product)
-                exit('指定文章不存在!');
+                exit('呢个优惠已经不存在了~摊手~');
             Cache::put('product_'.$id,$product,60*24);
         }
     	

@@ -6,26 +6,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<title>正啊</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src='js/jquery-1.7.2.min.js'></script>
-	<script src="js/jquery.lazyload.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src='js/jquery.particleground.min.js'></script>
-	<script src='js/common.js'></script>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src='/js/jquery-1.7.2.min.js'></script>
+	<script src="/js/jquery.lazyload.min.js"></script>
+	<script src="/js/wow.min.js"></script>
+	<script src='/js/jquery.particleground.min.js'></script>
+	<script src='/js/common.js'></script>
 </head>
 <body>
 	<div id="particles"></div>
 	<div class="wrapper">
 		<div class="navbox">
-			<a href="index.html" class="logo">
+			<a href="/index.php" class="logo">
 				<img src="/images/logo.png" id="logo01">
 				<img src="/images/logo_a.png" id="logo02">
 			</a>
 			<ul class="nav">
-				<li><a href="/" id="all">最新优惠</a></li>
+				<li><a href="/index.php" id="all">最新优惠</a></li>
 				<li><a href="/channel1" id="entertainment">吃喝玩乐</a></li>
 				<li><a href="/channel2" id="market">超市特价</a></li>
 				<li><a href="/channel3" id="brand">抵买品牌</a></li>

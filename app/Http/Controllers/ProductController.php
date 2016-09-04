@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use DB;
+use Cache;
 use App\Product;
 
 use App\Http\Requests;
@@ -27,6 +28,7 @@ class ProductController extends Controller
     }
 
     public function destroy($id){
+        Cache::forget('product_'.$id);
     	Product::destroy($id);
     	return redirect('/admin/manage');
     }
