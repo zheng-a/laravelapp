@@ -12,7 +12,7 @@
 </head>
 <body style="background: #f0f0f0;">
 	<div class="ma_top">
-		<a target="_blank" href="/" class="ma_logo"><img src="/images/logo_a.png"></a>
+		<a target="_blank" href="index.html" class="ma_logo"><img src="/images/logo_a.png"></a>
 		<h1 class="ma_title">管理后台</h1>
 		<div class="ma_tool">
 			<div class="ma_searchbox">

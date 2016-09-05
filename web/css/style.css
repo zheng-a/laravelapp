@@ -156,13 +156,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .arrowmask{
     width: 0;
     height: 0;
-    border-bottom: solid 10px #fff;
-    border-left: solid 15px transparent;
-    border-right: solid 15px transparent;
+    border-bottom: solid 20px #fff;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
     display: block;
     position: absolute;
-    top: -10px;
-    left: 52px;
+    top: -20px;
+    left: 46px;
 }
 .sale_tips{
     display: inline-block;
@@ -336,7 +336,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .detailbox{
     margin: 30px 0 0;
-    word-break: break-all;
 }
 .detailbox img{
     max-width: 100%;
@@ -869,7 +868,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
         font-weight: bold;
     }
     .arrowmask{
-        left: 40px;
+        left: 36px;
     }
     .mainbox{
         width: 90%;
