@@ -40,7 +40,14 @@
 			</div>
 			<div class="editbox">
 				<h2>正文</h2>
-				<div><textarea name = "description" style="width:100%; height:300px;"></textarea></div>
+				<!-- <div>
+					<textarea name = "description" style="width:100%; height:300px;"></textarea>
+				</div> -->
+				@include('UEditor::head')
+				<script id="container" name="description" type="text/plain"></script>
+				<script type="text/javascript">
+				    var ue = UE.getEditor('container');
+				</script>
 			</div>
 			<hr class="hr">
 			<!--h2>分享者信息</h2>

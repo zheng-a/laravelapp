@@ -60,7 +60,7 @@ class IndexController extends Controller
         }
 
         if($views_cnt >= 3){
-            DB::table('Products')->where('id',$id)->update(['views'=>$views]);
+            DB::table('products')->where('id',$id)->update(['views'=>$views]);
             Cache::forever('post_views_cnt'.$id,0);
         }
 

@@ -19,7 +19,7 @@
 		<div class="detailbox">
 			<img src={{$product->imageurl}}>
 			<br><br>
-			<p>{{$product->description}}</p>
+			{!!$product->description!!}
 		</div>
 		<hr class="hr">
 		<dl class="writter">
