@@ -24,7 +24,7 @@
 		<hr class="hr">
 		<dl class="writter">
 			<dt><img src="/images/head01.jpg">{{$product->member_id}}</dt>
-			<dd>摆出一副很霸气的表情发布于2016年7月1日</dd>
+			<dd>发布于2016年7月1日</dd>
 		</dl>
 		<!--hr class="hr">
 		<div class="boardbox">
