@@ -18,7 +18,7 @@
 		</div>
 		<div class="detailbox">
 			<img src={{$product->imageurl}}>
-			<br><br>
+			<br>
 			{!!$product->description!!}
 		</div>
 		<hr class="hr">
@@ -93,6 +93,11 @@
 			</div>
 		</div-->
 	</div>
+	<script type="text/javascript">
+		//title内容
+		var titletext = $(".yhtitle").text();
+		$("title").text('正啊 - ' + titletext);
+	</script>
 </div>
 
 @endsection
