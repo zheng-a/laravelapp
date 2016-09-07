@@ -68,8 +68,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .list{
     list-style-type: none;
-    padding: 0;
-    margin: 50px 0 0;
+    padding: 50px 0 0;
+    margin: 0;
     text-align: center;
 }
 .list > li{
@@ -229,7 +229,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     z-index: -1;
     left: 0;
     top: 0;
-    background: -webkit-linear-gradient(top,#232526,#414345);
+    background: -webkit-linear-gradient(top,#29323c,#485563);
     background: -moz-linear-gradient(top,#232526,#414345);
     background: -o-linear-gradient(top,#232526,#414345);
 }
@@ -718,6 +718,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     }
 }
 @media screen and (max-width:950px){
+    .list{
+        padding: 0;
+    }
     .list > li{
         width: 90%;
         margin: 0 0 40px;
