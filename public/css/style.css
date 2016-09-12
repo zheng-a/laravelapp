@@ -52,20 +52,24 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .nav > li > a{
     font-size: 16px;
     line-height: 50px;
-    color: #333;
+    color: #fff;
     font-weight: bold;
     margin: 0 0 0 45px;
 }
 .nav > li > a:hover{
-    color: #666;
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    -o-opacity: 0.5;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
 }
 .nav > li > .selected{
-    color: #1ce383 !important;
+    color: #1ce383;
 }
 .list{
     list-style-type: none;
-    padding: 0;
-    margin: 50px 0 0;
+    padding: 50px 0 0;
+    margin: 0;
     text-align: center;
 }
 .list > li{
@@ -156,13 +160,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .arrowmask{
     width: 0;
     height: 0;
-    border-bottom: solid 20px #fff;
-    border-left: solid 20px transparent;
-    border-right: solid 20px transparent;
+    border-bottom: solid 10px #fff;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
     display: block;
     position: absolute;
-    top: -20px;
-    left: 46px;
+    top: -10px;
+    left: 54px;
 }
 .sale_tips{
     display: inline-block;
@@ -225,9 +229,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     z-index: -1;
     left: 0;
     top: 0;
-    background: -webkit-linear-gradient(top,#f6f6f6,#fff);
-    background: -moz-linear-gradient(top,#f6f6f6,#fff);
-    background: -o-linear-gradient(top,#f6f6f6,#fff);
+    background: -webkit-linear-gradient(top,#29323c,#485563);
+    background: -moz-linear-gradient(top,#232526,#414345);
+    background: -o-linear-gradient(top,#232526,#414345);
 }
 .indexbg{
     width: 100%;
@@ -305,6 +309,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .centerbox{
     padding: 50px;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    -o-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .yhid{
     font-size: 12px;
@@ -336,6 +344,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .detailbox{
     margin: 30px 0 0;
+    word-break: break-all;
 }
 .detailbox img{
     max-width: 100%;
@@ -709,6 +718,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     }
 }
 @media screen and (max-width:950px){
+    .list{
+        padding: 0;
+    }
     .list > li{
         width: 90%;
         margin: 0 0 40px;
@@ -868,7 +880,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
         font-weight: bold;
     }
     .arrowmask{
-        left: 36px;
+        left: 44px;
     }
     .mainbox{
         width: 90%;

@@ -1,8 +1,8 @@
 //线条
 $(document).ready(function() {
 	$('#particles').particleground({
-		dotColor: '#e6e6e6',
-		lineColor: '#e6e6e6'
+		dotColor: 'rgba(28,227,131,0.8)',
+		lineColor: 'rgba(0,0,0,0.2)'
 	});
 });
 
@@ -37,36 +37,36 @@ $(function(){
 	})
 
 	//导航
-	$(".nav li").click(function(){
-		$(".nav li").children("a").removeClass("selected");
-		$(this).children("a").addClass("selected");
-		$(document).scrollTop(1).scrollTop(-1);
-	})
-	$(".hidenav_link li").click(function(){
-		$(".hidenav_link li").children("a").removeClass("selected");
-		$(this).children("a").addClass("selected");
-		$(document).scrollTop(1).scrollTop(-1);
-		$(".hidenav_link").slideUp(100);
-		$(".mask").fadeOut(100);
-		$(".hidenav_menu").removeClass("active");
-	})
+	// $(".nav li").click(function(){
+	// 	$(".nav li").children("a").removeClass("selected");
+	// 	$(this).children("a").addClass("selected");
+	// 	$(document).scrollTop(1).scrollTop(-1);
+	// })
+	// $(".hidenav_link li").click(function(){
+	// 	$(".hidenav_link li").children("a").removeClass("selected");
+	// 	$(this).children("a").addClass("selected");
+	// 	$(document).scrollTop(1).scrollTop(-1);
+	// 	$(".hidenav_link").slideUp(100);
+	// 	$(".mask").fadeOut(100);
+	// 	$(".hidenav_menu").removeClass("active");
+	// })
 
 	//筛选
-	$("#all,#all01").click(function(){
-		$(".list li").fadeIn();
-	})
-	$("#entertainment,#entertainment01").click(function(){
-		$(".list li").hide();
-		$(".entertainment").fadeIn();
-	})
-	$("#market,#market01").click(function(){
-		$(".list li").hide();
-		$(".market").fadeIn();
-	})
-	$("#brand,#brand01").click(function(){
-		$(".list li").hide();
-		$(".brand").fadeIn();
-	})
+	// $("#all,#all01").click(function(){
+	// 	$(".list li").fadeIn();
+	// })
+	// $("#entertainment,#entertainment01").click(function(){
+	// 	$(".list li").hide();
+	// 	$(".entertainment").fadeIn();
+	// })
+	// $("#market,#market01").click(function(){
+	// 	$(".list li").hide();
+	// 	$(".market").fadeIn();
+	// })
+	// $("#brand,#brand01").click(function(){
+	// 	$(".list li").hide();
+	// 	$(".brand").fadeIn();
+	// })
 
 	//弹框
 	$(".editbtn01").click(function(){

@@ -18,13 +18,13 @@
 		</div>
 		<div class="detailbox">
 			<img src={{$product->imageurl}}>
-			<br><br>
+			<br>
 			{!!$product->description!!}
 		</div>
 		<hr class="hr">
 		<dl class="writter">
 			<dt><img src="/images/head01.jpg">{{$product->member_id}}</dt>
-			<dd>摆出一副很霸气的表情发布于2016年7月1日</dd>
+			<dd>发布于2016年7月1日</dd>
 		</dl>
 		<!--hr class="hr">
 		<div class="boardbox">
@@ -93,6 +93,11 @@
 			</div>
 		</div-->
 	</div>
+	<script type="text/javascript">
+		//title内容
+		var titletext = $(".yhtitle").text();
+		$("title").text('正啊 - ' + titletext);
+	</script>
 </div>
 
 @endsection

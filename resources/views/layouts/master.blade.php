@@ -63,7 +63,7 @@
 		$(function(){
 			//lazyload
 			$("img.lazy").lazyload({
-				placeholder : "images/logo_gray.png",
+				placeholder : "/images/logo_gray.png",
 				effect: "fadeIn"
 			});
 		})
