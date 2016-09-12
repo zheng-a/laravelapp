@@ -13,33 +13,65 @@ use App\Http\Requests;
 class IndexController extends Controller
 {
     public function index(){
-        $products = DB::select('select * from products order by id desc');
+        $products = Cache::get('products');
+        if(!$products){
+            $products = DB::table('products')->orderby('id','desc')->get();
+            Cache::put('products',$products,60);
+        }
+
     	return view('admin.products',['products' => $products]);
     }
 
     public function channel1(){
-        $products = DB::select('select * from products where channel = ? order by id desc',['吃喝玩乐']);
+        $products = Cache::get('products_1');
+        if(!$products){
+            $products = DB::table('products')->where('channel','=','吃喝玩乐')->orderby('id','desc')->get();
+            Cache::put('products_1',$products,60);
+        }
+        
     	return view('admin.products',['products' => $products]);
     }
 
     public function channel2(){
-        $products = DB::select('select * from products where channel = ? order by id desc',['超市特价']);
+        $products = Cache::get('products_2');
+        if(!$products){
+            $products = DB::table('products')->where('channel','=','超市特价')->orderby('id','desc')->get();
+            Cache::put('products_2',$products,60);
+        }
+        
     	return view('admin.products',['products' => $products]);
     }
 
     public function channel3(){
-        $products = DB::select('select * from products where channel = ? order by id desc',['抵买品牌']);
+        $products = Cache::get('products_3');
+        if(!$products){
+            $products = DB::table('products')->where('channel','=','抵买品牌')->orderby('id','desc')->get();
+            Cache::put('products_3',$products,60);
+        }
+        
     	return view('admin.products',['products' => $products]);
     }
 
     public function details(Request $request, $id){
-        $product = Cache::get('product_'.$id);
-        if(!$product){
+        $products = Cache::get('products');
+        foreach ($products as $key => $product) {
+            if($products[$key]->id == $id){
+                $product = $products[$key];
+                break;
+            }
+        }
+        if($product->id!=$id){
             $product = Product::find($id);
             if(!$product)
                 exit('呢个优惠已经不存在了~摊手~');
-            Cache::put('product_'.$id,$product,60*24);
         }
+        // $product = Cache::get('product_'.$id);
+        // if(!$product){
+        //     $product = Product::find($id);
+        //     if(!$product)
+        //         exit('呢个优惠已经不存在了~摊手~');
+        //     Cache::put('product_'.$id,$product,60*24);
+        // }
     	
         $views = Cache::get('post_views_'.$id);
         if(!$views){

@@ -16,7 +16,7 @@
 				</tr>
 				@foreach ($products as $product)
 				<tr>
-					<td>{{$product->id}}<div class="ma_control"><a href="edit.html" target="_blank" class="ma_edit">编辑</a><a href="/admin/product/destroy/{{$product->id}}" class="ma_del">删除</a></div></td>
+					<td>{{$product->id}}<div class="ma_control"><a href="/admin/product/edit/{{$product->id}}" target="_parent" class="ma_edit">编辑</a><a href="/admin/product/destroy/{{$product->id}}" class="ma_del">删除</a></div></td>
 					<td>{{$product->channel}}</td>
 					<td><a href="content.html" target="_blank">{{$product->title}}</a></td>
 					<td>{{$product->discount}}</td>
@@ -29,7 +29,7 @@
 				@endforeach
 			</table>
 			<div class="page">
-				<a href="">最前</a>
+<!-- 				<a href="">最前</a>
 				<a href="" class="iconfont">&#xe600;</a>
 				<div>
 					<a href="" class="selected">1</a>
@@ -39,7 +39,8 @@
 					<a href="">21</a>
 				</div>
 				<a href="" class="iconfont">&#xe604;</a>
-				<a href="">最后</a>
+				<a href="">最后</a> -->
+				{!! $products->links() !!}
 			</div>
 		</div>
 	</div>

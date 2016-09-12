@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link href="/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body style="background: #f0f0f0;">
 	<div class="ma_top">
@@ -30,5 +31,9 @@
 		</div>
 	</div>
 	@yield('content')
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -44,7 +44,7 @@
 					<textarea name = "description" style="width:100%; height:300px;"></textarea>
 				</div> -->
 				@include('UEditor::head')
-				<script id="container" name="description" type="text/plain"></script>
+				<script id="container" name="content" type="text/plain"></script>
 				<script type="text/javascript">
 				    var ue = UE.getEditor('container');
 				</script>

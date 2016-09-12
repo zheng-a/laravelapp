@@ -22,15 +22,19 @@ class ProductController extends Controller
     }
 
     public function index(){
-    	//$products = Product::all();
-        $products = DB::select('select * from products order by id desc');
+        $products = DB::table('products')->orderby('id','desc')->paginate(15);
     	return view('admin.manage',['products' => $products]);
     }
 
     public function destroy($id){
-        Cache::forget('product_'.$id);
-    	Product::destroy($id);
+        Product::destroy($id);
+        Cache::flush();
     	return redirect('/admin/manage');
+    }
+
+    public function edit($id){
+        $product = Product::find($id);
+        return view('admin.edit',['product' => $product]);
     }
 
     public function newProduct(){
@@ -58,13 +62,49 @@ class ProductController extends Controller
         $product->startat=Request::input('startat');
         $product->endat=Request::input('endat');
         $product->channel=Request::input('channel');
-        $product->description =Request::input('description');
+        $product->description =Request::input('content');
         $product->file_id=$entry->id; 
         $product->imageurl ="/uploads".$savePath;
         $product->member_id =Auth::user()->name;//Request::input('member_id');
         $product->views=0;
 
         $product->save();
+
+        Cache::flush();
+
+        return redirect('/admin/manage');
+    }
+
+    public function update($id){
+        $product = Product::find($id);
+        // $file = Request::file('file');
+        // $extension = $file->getClientOriginalExtension();
+        // $newFileName = $file->getFilename().'.'.$extension;
+        // $savePath = '/img/products/'.$newFileName;
+        // Storage::put($savePath,File::get($file));
+
+        // $entry = new \App\File();
+        // $entry->filename = $newFileName;
+        // $entry->mime = $file->getClientMimeType();
+        // $entry->original_filename = $file->getClientOriginalName();
+
+        // $entry->save();
+       
+        $product->title =Request::input('title');
+        $product->address=Request::input('address');
+        $product->discount=Request::input('discount');
+        $product->startat=Request::input('startat');
+        $product->endat=Request::input('endat');
+        $product->channel=Request::input('channel');
+        $product->description =Request::input('content');
+        //$product->file_id=$entry->id; 
+        //$product->imageurl ="/uploads".$savePath;
+        $product->member_id =Auth::user()->name;//Request::input('member_id');
+        $product->views=0;
+
+        $product->update();
+
+        Cache::flush();
 
         return redirect('/admin/manage');
     }
