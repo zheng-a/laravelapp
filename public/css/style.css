@@ -230,8 +230,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     left: 0;
     top: 0;
     background: -webkit-linear-gradient(top,#29323c,#485563);
-    background: -moz-linear-gradient(top,#232526,#414345);
-    background: -o-linear-gradient(top,#232526,#414345);
+    background: -moz-linear-gradient(top,#29323c,#485563);
+    background: -o-linear-gradient(top,#29323c,#485563);
 }
 .indexbg{
     width: 100%;
