@@ -12,14 +12,46 @@ use App\Http\Requests;
 
 class IndexController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        $request->session()->put('page', 1);
         $products = Cache::get('products');
         if(!$products){
-            $products = DB::table('products')->orderby('id','desc')->get();
+            $products = DB::table('products')->orderby('id','desc')->skip(0)->take(3)->get();
             Cache::put('products',$products,60);
         }
 
     	return view('admin.products',['products' => $products]);
+    }
+
+    public function more(Request $request){
+        $skip = 3;
+        $page = $request->session()->get('page');
+        $products = DB::table('products')->orderby('id','desc')->skip($skip*$page)->take($skip)->get();
+        $msg = '';
+        foreach ($products as $product) {
+            $temp = <<<MSG
+         <li class="wow fadeIn market">
+            <a href="/details/$product->id" class="list_img"><img class="lazy" data-original=$product->imageurl src=$product->imageurl></a>
+            <div class="list_content">
+                <div class="sale_type">
+                    <i class="arrowmask"></i>
+                    <span>$product->discount</span>
+                    <div class="sale_tips">
+                        <b><i class="iconfont">&#xe60b;</i>$product->address</b>
+                        <b><i class="iconfont">&#xe60f;</i>$product->startat 至 $product->endat</b>
+                    </div>
+                </div>
+                <h1 class="sale_title">
+                    <a href="/details/$product->id" class="ellipsis">$product->title</a>
+                    <div class="sale_head"><img src="/images/head01.jpg">$product->member_id</div>
+                </h1>
+            </div>
+        </li>
+MSG;
+            $msg .= $temp;
+        }
+        $request->session()->put('page',$page+1);
+        return response()->json(array('msg'=> $msg), 200);
     }
 
     public function channel1(){

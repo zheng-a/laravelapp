@@ -23,4 +23,22 @@
 		@endforeach
 	</ul>
 
+	<script src='/js/jquery-1.7.2.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+		            $.ajax({
+		               type:'get',
+		               url:'/more',
+		               data:'_token = <?php echo csrf_token() ?>',
+		               success:function(data){
+		                  //$("#msg").html(data.msg);
+		                  $("ul.list").append(data.msg);
+		               }
+		            });
+                }
+            });
+        });
+	</script>
 @endsection

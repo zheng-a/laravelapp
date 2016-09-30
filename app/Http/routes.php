@@ -13,6 +13,7 @@
 Route::get('/test', 'TestController@index');
 //Route::get('/', function(){return view('welcome');});
 Route::get('/', 'IndexController@index');
+Route::get('/more', 'IndexController@more');
 Route::get('/channel1', 'IndexController@channel1');
 Route::get('/channel2', 'IndexController@channel2');
 Route::get('/channel3', 'IndexController@channel3');
