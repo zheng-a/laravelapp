@@ -6,9 +6,6 @@ $(document).ready(function() {
 	});
 });
 
-//动画效果
-new WOW().init();
-
 $(function(){
 
 	//移动端菜单

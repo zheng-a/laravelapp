@@ -8,11 +8,9 @@
 	<title>正啊</title>
 	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/fonts/iconfont.css">
-	<link rel="stylesheet" type="text/css" href="/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script src='/js/jquery-1.7.2.min.js'></script>
 	<script src="/js/jquery.lazyload.min.js"></script>
-	<script src="/js/wow.min.js"></script>
 	<script src='/js/jquery.particleground.min.js'></script>
 	<script src='/js/common.js'></script>
 </head>

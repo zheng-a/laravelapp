@@ -756,6 +756,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
         display: inline-block;
         *display: inline;
         *zoom: 1;
+        height: 44px;
+        margin: 8px 0 0;
     }
     .contentbox{
         padding: 80px 0 0;

@@ -3,7 +3,7 @@
 @section('content')
 	<ul class="list">
 		@foreach ($products as $product)
-		<li class="wow fadeIn market">
+		<li class="market">
 			<a href="/details/{{$product->id}}" class="list_img"><img class="lazy" data-original={{$product->imageurl}} src={{$product->imageurl}}></a>
 			<div class="list_content">
 				<div class="sale_type">
